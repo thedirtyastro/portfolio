@@ -389,7 +389,7 @@ function Page3() {
         display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12,
       }}>
         <p style={{ fontSize: 12, color: "#68675f" }}>Want a copy of the full resume?</p>
-        <a href="../assets/Sarukhan-Resume.pdf" download
+        <a href="/Sarukhan-Resume.pdf" download
           style={{
             fontSize: 11, letterSpacing: "0.08em", textTransform: "uppercase",
             color: "#faf9f6", background: "#0a0a09",

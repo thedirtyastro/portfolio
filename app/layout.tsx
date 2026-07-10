@@ -23,7 +23,7 @@ export default function RootLayout({
         {/* Runs before first paint — prevents theme flash */}
         <ThemeScript />
       </head>
-      <body style={{ background: "var(--paper)", color: "var(--ink)" }}>
+      <body suppressHydrationWarning style={{ background: "var(--paper)", color: "var(--ink)" }}>
         <ThemeProvider>
           <ResumeProvider>
             <Cursor />

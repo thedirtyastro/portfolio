@@ -33,6 +33,7 @@ export default function AboutSection() {
               src={Profile}
               alt="Sarukhan Muthuraman"
               fill
+              sizes="(max-width: 1040px) 100vw, 380px"
               className="object-cover"
               priority
             />
@@ -44,6 +45,7 @@ export default function AboutSection() {
                 alt=""
                 aria-hidden="true"
                 fill
+                sizes="(max-width: 1040px) 100vw, 380px"
                 className="object-cover grayscale"
               />
             </div>
@@ -110,7 +112,7 @@ export default function AboutSection() {
             <Link href="/about" className="btn-fill inline-flex items-center text-[12px] uppercase tracking-[0.07em] px-7 py-[15px] border border-(--ink)">
               Full Profile →
             </Link>
-            <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center text-[12px] uppercase tracking-[0.07em] px-7 py-[15px] border border-(--mist)">
+            <a href="/Sarukhan-Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center text-[12px] uppercase tracking-[0.07em] px-7 py-[15px] border border-(--mist)">
               Download CV
             </a>
           </div>

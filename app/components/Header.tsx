@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useResume } from "./ResumeProvider";
 import Logo from "../assets/Logo.png";
+import LogoDark from "../assets/Logo-D.png";
+import { useTheme } from "./ThemeProvider";
 
 const NAV = [
   { label: "Work",    href: "/work" },
@@ -27,6 +29,8 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
+  const { theme } = useTheme();
+
   return (
     <>
       <header
@@ -43,7 +47,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" aria-label="Home" style={{ display: "flex", alignItems: "center", zIndex: 600 }}>
           <Image
-            src={Logo}
+            src={ theme === "dark" ? LogoDark : Logo }
             alt="Sarukhan Muthuraman"
             height={56}
             priority

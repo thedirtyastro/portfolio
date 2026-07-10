@@ -12,7 +12,7 @@ const SOCIAL_LINKS = [
   { l: "LinkedIn", h: "https://www.linkedin.com/in/sarukhan-muthuraman-752869391/" },
   { l: "GitHub",   h: "https://github.com/thedirtyastro" },
   { l: "Twitter",  h: "https://x.com/thedirtyastro" },
-  { l: "Resume ↗", h: "/assets/resume.pdf" },
+  { l: "Resume ↗", h: "/Sarukhan-Resume.pdf" },
 ];
 
 export default function ContactSection() {
