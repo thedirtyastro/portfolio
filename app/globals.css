@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN TOKENS — light (default)
+═══════════════════════════════════════════════════════════════ */
+:root {
+  --ink:      #0a0a09;
+  --paper:    #faf9f6;
+  --graphite: #68675f;
+  --mist:     #d8d6cd;
+  --hair:     #232320;
+  --signal:   #b6ff3c;
+  --ease:     cubic-bezier(0.16, 0.8, 0.24, 1);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN TOKENS — dark
+═══════════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  --ink:      #f0eeea;
+  --paper:    #111110;
+  --graphite: #8a8880;
+  --mist:     #2e2d2b;
+  --hair:     #1c1c1a;
+  --signal:   #b6ff3c;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL THEME TRANSITION
+   Every element inherits a smooth transition on theme switch.
+   We target bg, color, border — the three properties that change.
+═══════════════════════════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  transition-property: background-color, color, border-color, fill, stroke;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
+/* ── Re-enable animation-specific transitions so GSAP isn't affected ── */
+[data-animate],
+.reveal-line span,
+.photo-bw-layer,
+.btn-fill,
+.btn-fill::before,
+.nav-link::after {
+  transition-property: opacity, transform, clip-path, color, border-color, background-color;
+  transition-duration: inherit;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════════════════════════ */
+html {
+  scroll-behavior: smooth;
+  background: var(--paper);
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--signal);
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: none;
+  overflow-x: hidden;
+}
+
+@media (max-width: 860px) { body { cursor: auto; } }
+
+a      { color: inherit; text-decoration: none; }
+ul     { list-style: none; }
+img    { max-width: 100%; display: block; }
+button { font-family: inherit; background: none; border: none; cursor: none; color: inherit; }
+@media (max-width: 860px) { a, button { cursor: pointer; } }
+
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO REVEAL
+═══════════════════════════════════════════════════════════════ */
+.reveal-line       { overflow: hidden; display: block; }
+.reveal-line span  {
+  display: inline-block;
+  transform: translateY(110%);
+  will-change: transform;
+  /* override global transition for transform */
+  transition: transform 0s;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MARQUEE
+═══════════════════════════════════════════════════════════════ */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 4rem;
+  animation: marquee 28s linear infinite;
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL ENTRY  [data-animate]
+═══════════════════════════════════════════════════════════════ */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s ease, transform 0.7s ease !important;
+}
+[data-animate].in-view { opacity: 1; transform: translateY(0); }
+[data-delay="1"] { transition-delay: 0.10s !important; }
+[data-delay="2"] { transition-delay: 0.20s !important; }
+[data-delay="3"] { transition-delay: 0.30s !important; }
+[data-delay="4"] { transition-delay: 0.40s !important; }
+[data-delay="5"] { transition-delay: 0.50s !important; }
+
+/* ═══════════════════════════════════════════════════════════════
+   BTN FILL-UP
+═══════════════════════════════════════════════════════════════ */
+.btn-fill {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.35s var(--ease) !important;
+}
+.btn-fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform: translateY(101%);
+  transition: transform 0.35s var(--ease), background 0.25s ease !important;
+  z-index: -1;
+}
+.btn-fill:hover          { color: var(--paper); }
+.btn-fill:hover::before  { transform: translateY(0); }
+
+/* ═══════════════════════════════════════════════════════════════
+   NAV UNDERLINE
+═══════════════════════════════════════════════════════════════ */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 1px;
+  background: currentColor;
+  transition: width 0.35s var(--ease) !important;
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+/* ═══════════════════════════════════════════════════════════════
+   CURSOR
+═══════════════════════════════════════════════════════════════ */
+#cursor-dot {
+  background: var(--ink);
+  transition: background 0.25s ease;
+}
+#cursor-ring {
+  border-color: var(--ink);
+  transition: width 0.25s var(--ease), height 0.25s var(--ease),
+              border-color 0.25s var(--ease), background 0.25s var(--ease);
+}
+#cursor-ring.hovered {
+  width: 64px !important;
+  height: 64px !important;
+  background: var(--signal) !important;
+  border-color: var(--signal) !important;
+}
+@media (max-width: 860px) { #cursor-dot, #cursor-ring { display: none; } }
+
+/* ═══════════════════════════════════════════════════════════════
+   GRID TEXTURE
+═══════════════════════════════════════════════════════════════ */
+.grid-texture {
+  background-image:
+    linear-gradient(var(--hair) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hair) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PHOTO HOVER — B&W → color circle reveal
+═══════════════════════════════════════════════════════════════ */
+.photo-block { cursor: none; }
+
+.photo-bw-layer {
+  clip-path: circle(100% at 50% 50%);
+  transition: clip-path 0.75s cubic-bezier(0.16, 0.8, 0.24, 1) !important;
+  will-change: clip-path;
+}
+
+.photo-block:hover .photo-bw-layer {
+  clip-path: circle(0% at 50% 50%);
+}
+
+@media (max-width: 860px) { .photo-block { cursor: auto; } }
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK MODE — explicit overrides for elements that need it
+   (Tailwind utility classes using CSS vars update automatically,
+    but some hardcoded values need explicit dark overrides)
+═══════════════════════════════════════════════════════════════ */
+
+/* Preloader uses hardcoded bg-(--ink) which works via var, but
+   the progress bar track needs explicit handling */
+[data-theme="dark"] .photo-bw-layer img {
+  filter: grayscale(100%);
+}
+
+/* Scrollbar — subtle theming */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb { background: var(--mist); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--graphite); }
