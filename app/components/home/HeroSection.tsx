@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import SectionLabel from "../ui/SectionLabel";
+import { useResume } from "../ResumeProvider";
 
 const ROLES = ["Frontend Engineer", "Web3 Developer", "UI Engineer"];
 
 export default function HeroSection() {
+  const { openResume } = useResume();
+
   return (
     <section className="min-h-screen flex flex-col justify-between pt-44 pb-0 px-[clamp(24px,6vw,96px)] border-b border-(--mist)">
 
@@ -25,11 +30,6 @@ export default function HeroSection() {
       </div>
 
       {/* ── Bottom band ───────────────────────────────────────── */}
-      {/*
-        Layout (desktop):
-        | Role pills + description | Divider | Year / exp stat | Divider | CTAs |
-        Full-width, border-top, sits flush at bottom of the viewport
-      */}
       <div
         data-animate
         className="grid grid-cols-[1fr_1px_200px_1px_auto] gap-0 border-t border-(--mist) mt-20 max-lg:grid-cols-1 max-lg:border-0 max-lg:mt-16 max-lg:gap-0"
@@ -96,13 +96,14 @@ export default function HeroSection() {
             <span>Get in Touch</span>
             <span className="text-[16px] leading-none">↗</span>
           </Link>
-          <a
-            href="#"
+          <button
+            onClick={openResume}
             className="btn-fill inline-flex items-center justify-between border border-(--mist) px-6 py-4 text-[12px] uppercase tracking-[0.07em] w-full max-lg:w-auto max-lg:justify-start max-lg:gap-6"
+            style={{ fontFamily: "inherit", cursor: "pointer", background: "transparent" }}
           >
-            <span>Download CV</span>
-            <span className="text-[16px] leading-none">↓</span>
-          </a>
+            <span>View Resume</span>
+            <span className="text-[16px] leading-none">↗</span>
+          </button>
         </div>
 
       </div>

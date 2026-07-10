@@ -6,6 +6,7 @@ import ThemeProvider from "./components/ThemeProvider";
 import ThemeScript from "./components/ThemeScript";
 import SiteFooter from "./components/SiteFooter";
 import FloatingThemeToggle from "./components/FloatingThemeToggle";
+import ResumeProvider from "./components/ResumeProvider";
 
 export const metadata: Metadata = {
   title: "Sarukhan Muthuraman — Frontend Engineer & Web3 Developer",
@@ -24,12 +25,14 @@ export default function RootLayout({
       </head>
       <body style={{ background: "var(--paper)", color: "var(--ink)" }}>
         <ThemeProvider>
-          <Cursor />
-          <Header />
-          <main>{children}</main>
-          <SiteFooter />
-          {/* Always-visible floating toggle — bottom right */}
-          <FloatingThemeToggle />
+          <ResumeProvider>
+            <Cursor />
+            <Header />
+            <main>{children}</main>
+            <SiteFooter />
+            {/* Always-visible floating toggle — bottom right */}
+            <FloatingThemeToggle />
+          </ResumeProvider>
         </ThemeProvider>
       </body>
     </html>

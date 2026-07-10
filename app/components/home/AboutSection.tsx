@@ -72,7 +72,7 @@ export default function AboutSection() {
           <div className="flex flex-col gap-3">
             {[
               ["Location", "Bangalore, India"],
-              ["Experience", "3+ Years"],
+              ["Experience", "2+ Years"],
               ["Focus", "Frontend & Web3"],
             ].map(([k, v]) => (
               <div key={k} className="flex justify-between items-center py-3 border-b border-(--mist)">

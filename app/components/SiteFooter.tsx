@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useResume } from "./ResumeProvider";
 
 const NAV_LINKS = [
   { label: "Work",    href: "/work" },
@@ -12,10 +13,11 @@ const SOCIAL_LINKS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sarukhan-muthuraman-752869391/" },
   { label: "GitHub",   href: "https://github.com/thedirtyastro" },
   { label: "Twitter",  href: "https://x.com/thedirtyastro" },
-  { label: "Resume",   href: "/assets/resume.pdf" },
 ];
 
 export default function SiteFooter() {
+  const { openResume } = useResume();
+
   return (
     <footer
       style={{
@@ -85,6 +87,16 @@ export default function SiteFooter() {
                 </a>
               </li>
             ))}
+            {/* Resume opens the modal */}
+            <li>
+              <button
+                onClick={openResume}
+                className="text-[15px] text-(--ink) hover:text-(--graphite) transition-colors"
+                style={{ background: "none", border: "none", cursor: "pointer", fontFamily: "inherit", padding: 0 }}
+              >
+                Resume ↗
+              </button>
+            </li>
           </ul>
         </div>
 
