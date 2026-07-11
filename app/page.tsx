@@ -26,8 +26,9 @@ export default function Home() {
       )}
       <HeroSection />
       <Marquee />
-      <WorkSection />
       <AboutSection />
+      <WorkSection />
+
       <ContactSection />
     </>
   );
