@@ -228,9 +228,9 @@ function Page1() {
           <span>📞 7092978110</span>
           <span>✉ s.saru7072@gmail.com</span>
           <span>📍 Bangalore, Karnataka, India</span>
-          <a href="https://uplabs.com/muazz1m" target="_blank" rel="noopener noreferrer"
+          <a href="/"  rel="noopener noreferrer"
             style={{ color: "#0a0a09", textDecoration: "underline" }}>
-            uplabs.com/muazz1m ↗
+            Portfolio/Sarukhan ↗
           </a>
         </div>
       </div>
