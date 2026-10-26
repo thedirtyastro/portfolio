@@ -9,9 +9,25 @@ import FloatingThemeToggle from "./components/FloatingThemeToggle";
 import ResumeProvider from "./components/ResumeProvider";
 
 export const metadata: Metadata = {
-  title: "Sarukhan Muthuraman — Frontend Engineer & Web3 Developer",
+  title: "Sarukhan Muthuraman | Frontend & Full Stack Developer",
   description:
-    "Sarukhan Muthuraman — Frontend Engineer, Web3 Developer, UI Engineer. Portfolio of selected work in Next.js, React, TypeScript and blockchain.",
+    "Sarukhan Muthuraman is a Frontend and Full Stack Developer specializing in React, Next.js, TypeScript, responsive web applications, and scalable product development. Explore projects and get in touch.",
+  metadataBase: new URL("https://sarukhan.dev"),
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "https://sarukhan.dev",
+    title: "Sarukhan Muthuraman | Frontend & Full Stack Developer",
+    description:
+      "Sarukhan Muthuraman is a Frontend and Full Stack Developer specializing in React, Next.js, TypeScript, responsive web applications, and scalable product development.",
+    siteName: "Sarukhan Muthuraman",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sarukhan Muthuraman | Frontend & Full Stack Developer",
+    description:
+      "Frontend and Full Stack Developer specializing in React, Next.js, TypeScript, and scalable product development.",
+  },
 };
 
 export default function RootLayout({

@@ -3,7 +3,7 @@ const LINKS = [
   { label: "Phone",    href: "tel:+917092978110",           text: "+91 7092978110" },
   { label: "LinkedIn", href: "#",                           text: "linkedin.com/in/sarukhan" },
   { label: "GitHub",   href: "#",                           text: "github.com/sarukhan" },
-  { label: "Resume",   href: "#",                           text: "Download Resume ↗" },
+  { label: "Resume",   href: "/Sarukhan_Frontend_Developer_Resume.pdf",  text: "Download Resume ↗" },
 ];
 
 export default function ContactLinks() {

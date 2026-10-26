@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@marsidev/react-turnstile": "^1.5.3",
     "gsap": "3.12.5",
     "lenis": "1.1.14",
     "next": "16.2.10",

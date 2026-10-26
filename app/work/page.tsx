@@ -1,5 +1,17 @@
+import type { Metadata } from "next";
 import GSAPInitServer from "../components/GSAPInitServer";
 import ProjectList from "../components/work/ProjectList";
+
+export const metadata: Metadata = {
+  title: "Work | Sarukhan Muthuraman",
+  description: "Selected projects by Sarukhan Muthuraman — Web3 platforms, FinTech apps, trading UIs, and more built with Next.js, React, and TypeScript.",
+  alternates: { canonical: "/work" },
+  openGraph: {
+    title: "Work | Sarukhan Muthuraman",
+    description: "Selected projects — Web3 platforms, FinTech apps, trading UIs built with Next.js, React, and TypeScript.",
+    url: "https://sarukhan.dev/work",
+  },
+};
 
 export default function WorkPage() {
   return (

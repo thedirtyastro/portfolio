@@ -187,7 +187,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   PHOTO HOVER — B&W → color circle reveal
+   PHOTO HOVER — B&W clips away revealing colour
 ═══════════════════════════════════════════════════════════════ */
 .photo-block { cursor: none; }
 
@@ -204,16 +204,8 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
 @media (max-width: 860px) { .photo-block { cursor: auto; } }
 
 /* ═══════════════════════════════════════════════════════════════
-   DARK MODE — explicit overrides for elements that need it
-   (Tailwind utility classes using CSS vars update automatically,
-    but some hardcoded values need explicit dark overrides)
+   DARK MODE
 ═══════════════════════════════════════════════════════════════ */
-
-/* Preloader uses hardcoded bg-(--ink) which works via var, but
-   the progress bar track needs explicit handling */
-[data-theme="dark"] .photo-bw-layer img {
-  filter: grayscale(100%);
-}
 
 /* Scrollbar — subtle theming */
 ::-webkit-scrollbar { width: 6px; }

@@ -19,7 +19,7 @@ export default function AboutHero() {
 
         <div className="flex flex-col gap-6">
           {[
-            "I'm a Frontend Engineer with over three years of experience building high-performance web applications for Web3, FinTech, and SaaS products.",
+            "I'm a Frontend Engineer with 2+ years of experience building high-performance web applications for Web3, FinTech, and SaaS products.",
             "I specialize in transforming complex product requirements into intuitive, scalable, and visually refined digital experiences.",
             "Based in Bangalore, India. Available for freelance, remote, and full-time opportunities.",
           ].map((text, i) => (

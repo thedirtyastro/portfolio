@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import SectionLabel from "../ui/SectionLabel";
 import Image from "next/image";
@@ -26,44 +28,20 @@ export default function AboutSection() {
 
         {/* Photo block */}
         <div data-animate className="flex flex-col gap-8">
-          {/* Photo with B&W → color reveal on hover */}
           <div className="photo-block w-full aspect-3/4 relative overflow-hidden bg-(--ink)">
-            {/* Layer 1 — full color (always visible underneath) */}
-            <Image
-              src={Profile}
-              alt="Sarukhan Muthuraman"
-              fill
-              sizes="(max-width: 1040px) 100vw, 380px"
-              className="object-cover"
-              priority
-            />
+            {/* Layer 1 — full colour (always visible underneath) */}
+            <Image src={Profile} alt="Sarukhan Muthuraman" fill className="object-cover" priority />
 
-            {/* Layer 2 — grayscale overlay, clips away on hover revealing color below */}
+            {/* Layer 2 — grayscale overlay, clips away on hover */}
             <div className="photo-bw-layer absolute inset-0">
-              <Image
-                src={Profile}
-                alt=""
-                aria-hidden="true"
-                fill
-                sizes="(max-width: 1040px) 100vw, 380px"
-                className="object-cover grayscale"
-              />
+              <Image src={Profile} alt="" aria-hidden="true" fill className="object-cover grayscale" />
             </div>
 
-            {/* Overlay badge — neutral, not signal green */}
+            {/* Badge */}
             <div className="absolute bottom-6 left-6 right-6 z-10">
-              <div
-                className="px-5 py-3 inline-flex items-center gap-3"
-                style={{ background: "var(--ink)" }}
-              >
-                <span
-                  className="w-2 h-2 rounded-full shrink-0"
-                  style={{ background: "var(--signal)" }}
-                />
-                <span
-                  className="text-[11px] uppercase tracking-[0.12em] font-medium"
-                  style={{ color: "var(--paper)" }}
-                >
+              <div className="px-5 py-3 inline-flex items-center gap-3" style={{ background: "var(--ink)" }}>
+                <span className="w-2 h-2 rounded-full shrink-0" style={{ background: "var(--signal)" }} />
+                <span className="text-[11px] uppercase tracking-[0.12em] font-medium" style={{ color: "var(--paper)" }}>
                   Available for work
                 </span>
               </div>
@@ -98,7 +76,7 @@ export default function AboutSection() {
               Web3 experiences, and interactive user interfaces.
             </p>
             <p>
-              With 3+ years of professional experience, I build scalable products
+              With 2+ years of professional experience, I build scalable products
               using Next.js, React, TypeScript, Tailwind CSS, Spring Boot, and
               blockchain technologies.
             </p>
@@ -112,7 +90,7 @@ export default function AboutSection() {
             <Link href="/about" className="btn-fill inline-flex items-center text-[12px] uppercase tracking-[0.07em] px-7 py-[15px] border border-(--ink)">
               Full Profile →
             </Link>
-            <a href="/Sarukhan-Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center text-[12px] uppercase tracking-[0.07em] px-7 py-[15px] border border-(--mist)">
+            <a href="/Sarukhan_Frontend_Developer_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-fill inline-flex items-center text-[12px] uppercase tracking-[0.07em] px-7 py-[15px] border border-(--mist)">
               Download CV
             </a>
           </div>

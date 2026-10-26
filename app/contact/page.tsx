@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import GSAPInitServer from "../components/GSAPInitServer";
 import ContactLinks from "../components/contact/ContactLinks";
 import ContactForm from "../components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact | Sarukhan Muthuraman",
+  description: "Get in touch with Sarukhan Muthuraman — available for freelance projects, full-time roles, and remote opportunities.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact | Sarukhan Muthuraman",
+    description: "Available for freelance projects, full-time roles, and remote opportunities.",
+    url: "https://sarukhan.dev/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -32,7 +44,7 @@ export default function ContactPage() {
           <div data-animate>
             <ContactLinks />
           </div>
-          <div data-animate data-delay="2">
+          <div data-animate data-delay="2" className="border border-(--mist) p-10 max-sm:p-6">
             <p className="text-[13px] uppercase tracking-widest text-(--graphite) mb-10">
               Send a Message
             </p>
