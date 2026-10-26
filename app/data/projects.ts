@@ -126,8 +126,8 @@ export const PROJECTS: Project[] = [
     num: "04",
 
     slug: "mifos-admin-tool",
-    link: "https://github.com/openmf",
-    liveUrl: "https://github.com/openmf",
+    link: "https://docs.mifos.org/mifosx/user-manual/for-administrators-mifos-x-platform/administration/users",
+    liveUrl: "https://docs.mifos.org/mifosx/user-manual/for-administrators-mifos-x-platform/administration/users",
 
     name: "Mifos Admin Tool",
 
@@ -173,7 +173,8 @@ export const PROJECTS: Project[] = [
     role: ["Frontend Developer.", "Developed frontend interfaces for perpetual trading and token swaps.", "Built reusable components and responsive layouts."],
     bannerImages: ["/projects/perps-swap-ui/banner-1.webp", "/projects/perps-swap-ui/banner-2.webp"],
     images: ["/projects/perps-swap-ui/image-1.webp", "/projects/perps-swap-ui/image-2.webp", "/projects/perps-swap-ui/image-3.webp"],
-    liveUrl: "",
+    link: "https://kana-labs-swap.vercel.app/",
+    liveUrl: "https://kana-labs-swap.vercel.app/",
   },
 
   {
@@ -228,7 +229,8 @@ export const PROJECTS: Project[] = [
     role: ["Frontend Developer.", "Implemented TradingView integration and chart-related frontend enhancements.", "Customised chart layouts and user-facing interactions."],
     bannerImages: ["/projects/tradingview-plugins/banner-1.webp"],
     images: ["/projects/tradingview-plugins/image-1.webp", "/projects/tradingview-plugins/image-2.webp", "/projects/tradingview-plugins/image-3.webp"],
-    liveUrl: "",
+    link: "https://in.tradingview.com/widget/",
+    liveUrl: "https://in.tradingview.com/widget/",
   },
 
   {
@@ -236,6 +238,7 @@ export const PROJECTS: Project[] = [
     num: "08",
 
     slug: "hesed-counseling",
+    link: "https://thedirtyastro.github.io/hesed-counselling/",
     liveUrl: "https://thedirtyastro.github.io/hesed-counselling/",
 
     name: "Hesed Counseling",
@@ -243,8 +246,6 @@ export const PROJECTS: Project[] = [
     type: "Freelance Website Development",
 
     year: "2024",
-
-    link: "hesedcounseling.com",
 
     desc: "Freelance website project created to practise AI-assisted development, prompting, and building a clear, responsive web experience.",
 
@@ -284,7 +285,8 @@ export const PROJECTS: Project[] = [
     role: ["Frontend Developer.", "Self-initiated and developed the project for the company.", "Implemented responsive layout, visual components, and animations."],
     bannerImages: ["/projects/kanalabs-hero/banner-1.webp", "/projects/kanalabs-hero/banner-2.webp"],
     images: ["/projects/kanalabs-hero/image-1.webp", "/projects/kanalabs-hero/image-2.webp", "/projects/kanalabs-hero/image-3.webp"],
-    liveUrl: "",
+    link: "https://kana-labs.vercel.app/",
+    liveUrl: "https://kana-labs.vercel.app/",
   },
 
   {
@@ -292,7 +294,8 @@ export const PROJECTS: Project[] = [
     num: "10",
 
     slug: "personal-portfolio",
-    liveUrl: "https://sarukhan.devs.li/",
+    link: "https://sarukhan-muthuraman.vercel.app/",
+    liveUrl: "https://sarukhan-muthuraman.vercel.app/",
 
     name: "Personal Portfolio",
 
@@ -367,8 +370,8 @@ export const PROJECTS: Project[] = [
     name: "Kana Landing",
     type: "Landing Page · Freelance/AI-Assisted Experiment",
     year: "2026",
-    link: "https://kana-landing.vercel.app/",
-    liveUrl: "https://kana-landing.vercel.app/",
+    link: "https://kana-landing-nw.vercel.app/",
+    liveUrl: "https://kana-landing-nw.vercel.app/",
     desc: "A landing-page project built to practise fast web delivery, AI-assisted prompting, and marketing-oriented presentation.",
     bullets: ["Developed a dedicated landing-page experience.", "Experimented with AI capabilities and prompt engineering.", "Practised communicating product value through page structure and visual design."],
     stack: ["Next.js", "Web Development"],
@@ -547,8 +550,8 @@ export const PROJECTS: Project[] = [
     name: "Kana Labs Swap",
     type: "Web3 Token Swap Application · Professional Product",
     year: "2026",
-    link: "https://kana-labs-swap.vercel.app/",
-    liveUrl: "https://kana-labs-swap.vercel.app/",
+    link: "https://xyra.trade/swap",
+    liveUrl: "https://xyra.trade/swap",
     desc: "Frontend development for a Web3 token-swap interface in the Kana Labs ecosystem.",
     bullets: ["Worked as a Frontend Developer on the token-swap interface.", "Built responsive swap UI and reusable frontend components.", "Worked on presenting swap flows and states through the frontend."],
     stack: ["Next.js", "Web3"],
